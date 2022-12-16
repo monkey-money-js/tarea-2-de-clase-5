@@ -7,8 +7,9 @@ $botonInformacionUsuario.onclick = function capturarInformacionUsuario(){
     const apellidoUsuario = document.querySelector('apellido-usuario').value;
     const edadUsuario = Number(document.querySelector('edad-usuario').value);
 
-    function darBienvenidaAlUsuario(nombreUsuario);
-    function hacerVisibleCampoDeTexto();
+    darBienvenidaAlUsuario(nombreUsuario);
+    hacerVisibleCampoDeTexto();
+    completaCampoDeTexto(nombreUsuario, segundoNombreUsuario, apellidoUsuario, edadUsuario);
    
 }
 
@@ -20,3 +21,12 @@ function hacerVisibleCampoDeTexto(){
     document.querySelector('#campo-texto-informacion-usuario').className = '';
 }
 
+function completaCampoDeTexto(nombreUsuario, segundoNombreUsuario, apellidoUsuario, edadUsuario){
+    
+    const textoInformacionDeUsuario = `Nombre de usuario: ${nombreUsuario}
+    Segundo nombre: ${segundoNombreUsuario}
+    Apellido: ${apellidoUsuario}
+    Edad: ${edadUsuario}`;
+
+    document.querySelector('#campo-texto-informacion-usuario').textContent = textoInformacionDeUsuario;
+}
