@@ -8,11 +8,15 @@ $botonInformacionUsuario.onclick = function capturarInformacionUsuario(){
     const edadUsuario = Number(document.querySelector('edad-usuario').value);
 
     function darBienvenidaAlUsuario(nombreUsuario);
-    
+    function hacerVisibleCampoDeTexto();
    
 }
 
 function darBienvenidaAlUsuario(nombreUsuario){
     document.querySelector('h1').textContent = `Bienvenido ${nombreUsuario}!`;
+}
+
+function hacerVisibleCampoDeTexto(){
+    document.querySelector('#campo-texto-informacion-usuario').className = '';
 }
 
